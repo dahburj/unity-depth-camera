@@ -16,7 +16,7 @@ Green channel only with inverted depth values.<br><br>
 
 <img src="images/dc4.png" align="middle" width="1407"/>
 
-One color channel per distance range, increasing the total depth value resolution compared to using a single channel.<br><br>
+One color channel per distance range, increases the total depth resolution compared to using a single channel.<br><br>
 
 <img src="images/dc3.png" align="middle" width="1407"/>
 

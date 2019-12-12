@@ -15,21 +15,21 @@ public class DepthCam : MonoBehaviour
     private ChannelState redChannel;
     [SerializeField, Range(0f, 0.99f), Tooltip("Clamp minimum distance")]
     private float rMin = 0f;
-    [SerializeField, Range(0f, 1f), Tooltip("Clamp maximum distance")]
+    [SerializeField, Range(0.01f, 1f), Tooltip("Clamp maximum distance")]
     private float rMax = 1f;
 
     [SerializeField]
     private ChannelState greenChannel;
     [SerializeField, Range(0f, 0.99f), Tooltip("Clamp minimum distance")]
     private float gMin = 0f;
-    [SerializeField, Range(0f, 1f), Tooltip("Clamp maximum distance")]
+    [SerializeField, Range(0.01f, 1f), Tooltip("Clamp maximum distance")]
     private float gMax = 1f;
 
     [SerializeField]
     private ChannelState blueChannel;
     [SerializeField, Range(0f, 0.99f), Tooltip("Clamp minimum distance")]
     private float bMin = 0f;
-    [SerializeField, Range(0f, 1f), Tooltip("Clamp maximum distance")]
+    [SerializeField, Range(0.01f, 1f), Tooltip("Clamp maximum distance")]
     private float bMax = 1f;
 
     [Header("Debug Draw")]
