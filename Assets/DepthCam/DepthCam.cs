@@ -3,6 +3,9 @@
 [ExecuteInEditMode, RequireComponent(typeof(Camera))]
 public class DepthCam : MonoBehaviour
 {
+    [SerializeField]
+    private Color background = Color.black;
+
     private enum ChannelState
     {
         depth = 0,
@@ -60,12 +63,13 @@ public class DepthCam : MonoBehaviour
         {
             material = new Material(shader);
             material.hideFlags = HideFlags.DontSave;
-
-            Camera cam = GetComponent<Camera>();
-            cam.depthTextureMode = DepthTextureMode.Depth;
-            cam.targetTexture = renderTexture;
         }
+        
+        Camera cam = GetComponent<Camera>();
+        cam.depthTextureMode = DepthTextureMode.Depth;
+        cam.targetTexture = renderTexture;
 
+        material.SetColor("_Color", background);
         material.SetInt("_R_State", (int)redChannel);
         material.SetFloat("_R_Min", rMin);
         material.SetFloat("_R_Max", rMax);

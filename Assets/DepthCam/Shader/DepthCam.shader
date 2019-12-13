@@ -3,6 +3,7 @@ Shader "Custom/DepthCam"
     Properties
     {
         _MainTex("", 2D) = ""{}
+        _Color ("Background", COLOR) = (0,0,0,1)
         _R_State("R_State", Int) = 0
         _R_Min("R_Min", Float) = 0
         _R_Max("R_Max", Float) = 1
